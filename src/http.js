@@ -9,6 +9,8 @@ export async function fetchAvailablePlaces() {
 export async function fetchUserPlaces() {
   const response = await fetch("http://localhost:3000/user-places"); // Adjust the URL to your API endpoint
   const resData = await response.json();
+  console.log("resData", resData);
+
   if (!response.ok) {
     throw new Error("Failed to fetch user places");
   }
